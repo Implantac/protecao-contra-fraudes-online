@@ -1,0 +1,108 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom font family */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom transitions */
+.hover\:text-blue-600,
+.hover\:bg-blue-700,
+.hover\:text-white {
+    transition: all 0.3s ease;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Custom focus styles */
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Card hover effects */
+.bg-white.p-6.rounded-lg {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bg-white.p-6.rounded-lg:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Button active state */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Form element focus states */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Custom list styles */
+ul.space-y-3 li {
+    position: relative;
+    transition: padding-left 0.2s ease;
+}
+
+ul.space-y-3 li:hover {
+    padding-left: 5px;
+}
+
+/* Footer link hover effect */
+footer a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
