@@ -1,3 +1,27 @@
+document.addEventListener('DOMContentLoaded', () => {
+    initSearch();
+
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const htmlElement = document.documentElement;
+
+    // Load saved theme preference
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        htmlElement.classList.add('dark');
+    } else {
+        htmlElement.classList.remove('dark');
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+        if (htmlElement.classList.contains('dark')) {
+            htmlElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        } else {
+            htmlElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+});
+
 /**
  * Utility function to validate URLs using regex and input type="url"
  * @param {string} url 
@@ -229,7 +253,4 @@ function showNotification(message, type = 'success') {
         setTimeout(() => notification.remove(), 300);
     }, 5000);
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    initSearch();
-});
+</create_file>
