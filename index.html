@@ -10,20 +10,23 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/scripts.js" defer></script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
     <!-- Header Section -->
-    <header class="bg-white shadow-sm">
+    <header class="bg-white dark:bg-gray-800 shadow-sm transition-colors duration-300">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <h1 class="text-2xl font-bold text-gray-800">
-                    <i class="fas fa-shield-alt text-blue-600"></i>
+                <h1 class="text-2xl font-bold text-gray-800 dark:text-gray-200">
+                    <i class="fas fa-shield-alt text-blue-600 dark:text-blue-400"></i>
                     Proteção Contra Fraudes
                 </h1>
-                <div class="space-x-4">
-                    <a href="#dashboard" class="text-gray-600 hover:text-blue-600">Dashboard</a>
-                    <a href="#search" class="text-gray-600 hover:text-blue-600">Buscar</a>
-                    <a href="#education" class="text-gray-600 hover:text-blue-600">Aprenda</a>
-                    <a href="#report" class="text-gray-600 hover:text-blue-600">Denunciar</a>
+                <div class="flex items-center space-x-4">
+                    <a href="#dashboard" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Dashboard</a>
+                    <a href="#search" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Buscar</a>
+                    <a href="#education" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Aprenda</a>
+                    <a href="#report" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Denunciar</a>
+                    <button id="darkModeToggle" aria-label="Alternar modo escuro" class="ml-4 p-2 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <i class="fas fa-moon text-gray-800 dark:text-gray-200"></i>
+                    </button>
                 </div>
             </div>
         </nav>
